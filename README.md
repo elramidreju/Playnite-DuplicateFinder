@@ -42,3 +42,9 @@ if (true)
     DoSomething();
 DoSomethingElse();
 ```
+
+## Third-Party Libraries
+This project uses the following third-party libraries:
+
+- [Fastenshtein](https://github.com/DanHarltey/Fastenshtein) is licensed under the [MIT License](https://github.com/DanHarltey/Fastenshtein/blob/master/LICENSE) - Copyright (c) 2017 DanHartley
+- [PlayniteSDK](https://playnite.link/) is licensed under the [MIT License](https://github.com/JosefNemec/Playnite/blob/master/LICENSE.md) - Copyright (c) 2020 Josef Nemec
