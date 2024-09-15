@@ -12,6 +12,10 @@ DuplicateFinder adds a sidebar view to your Playnite UI, allowing you to search 
 - Includes a '_Check for similarity_' option to search for **potentially** duplicate games with non-matching names.
 - Offers a customizable _Tolerance_ setting to fine-tune the '_Check for similarity_' results.
 
+## Disclaimer
+- When using '_Check for similarity_', false positives for sequels or similarly named games are expected (e.g. _Far Cry 3_ and _Far Cry 4_, or _Feud_ and _Fez_). While this feature is useful for identifying potential duplicates, always review the results to ensure accuracy.
+- DuplicateFinder was built with full awareness of the existence of [DuplicateHider](https://github.com/felixkmh/DuplicateHider) by **felixkmh**. However, DuplicateFinder was created with simplicity in mind, offering fewer features and less automation, but with greater ease of use and clarity. It provides information so users can review and decide what to do on a per-game basis. It is also designed to be easier to maintain and keep compatible with every version of Playnite.
+
 ## Contribute
 If you feel DuplicateFinder is lacking an important feature or something needs fixing, please open an issue or email me about it before working on anything.
 
