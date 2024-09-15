@@ -1,0 +1,8 @@
+﻿AddonId: DuplicateFinder_d85c1809-6ab7-40c2-9434-af74feeae2d3
+Packages:
+  - Version: 1.0.0
+    RequiredApiVersion: 6.11.0
+    ReleaseDate: 2024-09-15
+    PackageUrl: // TODO
+    Changelog:
+    - First release

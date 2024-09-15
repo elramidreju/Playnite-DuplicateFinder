@@ -1,11 +1,10 @@
-﻿Id: 'DuplicateFinder_d85c1809-6ab7-40c2-9434-af74feeae2d3'
-Type: GenericPlugin
+﻿Id: DuplicateFinder_d85c1809-6ab7-40c2-9434-af74feeae2d3
 Name: DuplicateFinder
-Author: 'Pablo García de los Salmones (_ramidreju)'
-ShortDescription: 'DuplicateFinder is a Playnite extension that offers a simple way to find duplicate games in your library.'
-InstallerManifestUrl: extension.yaml
-SourceUrl: https://github.com/elramidreju/Playnite-DuplicateFinder
-Tags: ['duplicate', 'repetition', 'hide', 'view']
-IconUrl: icon.png
-Module: DuplicateFinder.dll
+Author: Pablo García de los Salmones (_ramidreju)
 Version: 1.0.0
+Module: DuplicateFinder.dll
+Type: GenericPlugin
+Icon: icon.png
+Links:
+  - Name: GitHub repository
+    Url: https://github.com/elramidreju/Playnite-DuplicateFinder
