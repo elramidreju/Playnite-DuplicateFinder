@@ -1,0 +1,95 @@
+﻿<UserControl x:Class="DuplicateFinder.DuplicateFinderSidebarView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DuplicateFinder"
+             mc:Ignorable="d" 
+             d:DesignHeight="1080" d:DesignWidth="1920">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition   Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Margin="10"
+                    Grid.Row="0"
+                    Orientation="Vertical" 
+                    VerticalAlignment="Center">
+            <CheckBox   Name="IncludeHiddenGamesCheckBox"
+                        d:Content="Include hidden games"
+                        Content="{DynamicResource LOCDuplicateFinder_IncludeHidden}" 
+                        IsChecked="{Binding IncludeHiddenGames}" 
+                        Margin="0,0,0,10"/>
+            <CheckBox   Name="CheckSimilarityCheckBox"
+                        d:Content="Check for similarity" 
+                        Content="{DynamicResource LOCDuplicateFinder_CheckSimilar}" 
+                        IsChecked="{Binding CheckSimilarity}" 
+                        Margin="0,0,0,10"/>
+            <StackPanel Orientation="Horizontal">
+                <Label  d:Content="Tolerance"
+                        Content="{DynamicResource LOCDuplicateFinder_Tolerance}"
+                        VerticalAlignment="Center"/>
+                <Slider Name="ToleranceSlider"
+                        VerticalAlignment="Center"
+                        Minimum="0"
+                        Maximum="10" 
+                        Value="{Binding Tolerance}"
+                        Width="200" 
+                        IsEnabled="{Binding IsChecked, ElementName=CheckSimilarityCheckBox}" 
+                        Margin="10,0,0,0"/>
+                <Label  Content="{Binding ElementName=ToleranceSlider, Path=Value}" 
+                        VerticalAlignment="Center" 
+                        Margin="10,0,0,0" />
+            </StackPanel>
+            <Button Name="FindButton"
+                    d:Content="Find duplicates"
+                    Content="{DynamicResource LOCDuplicateFinder_FindButton}"
+                    Click="OnFindButtonClicked"
+                    Width="150"
+                    HorizontalAlignment="Left"
+                    Margin="0,10,0,0"/>
+        </StackPanel>
+        <Separator  Grid.Row="1"/>
+        <ListView   ItemsSource="{Binding FoundDuplicates}"
+                    Grid.Row="2"
+                    ScrollViewer.VerticalScrollBarVisibility="Auto"
+                    Margin="10">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn>
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image  Source="{Binding IconImage, IsAsync=True}"
+                                        Width="32"
+                                        Height="32" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn d:Header="Name"
+                                    Header="{DynamicResource LOCNameLabel}"
+                                    DisplayMemberBinding="{Binding Name}" />
+                                    <!--Width="800"-->
+                    <GridViewColumn d:Header="Library"
+                                    Header="{DynamicResource LOCLibrary}"
+                                    DisplayMemberBinding="{Binding Library}" />
+                                    <!--Width="400"-->
+                    <GridViewColumn d:Header="Hidden"
+                                    Header="{DynamicResource LOCDuplicateFinder_HiddenHeader}">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox   IsChecked="{Binding IsHidden}"
+                                            IsEnabled="False" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</UserControl>

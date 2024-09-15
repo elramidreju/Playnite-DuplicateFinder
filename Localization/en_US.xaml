@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="LOCDuplicateFinder_IncludeHidden">Include hidden games</sys:String>
+    <sys:String x:Key="LOCDuplicateFinder_CheckSimilar">Check for similarity</sys:String>
+    <sys:String x:Key="LOCDuplicateFinder_Tolerance">Tolerance</sys:String>
+    <sys:String x:Key="LOCDuplicateFinder_FindButton">Find duplicates</sys:String>
+    <sys:String x:Key="LOCDuplicateFinder_HiddenHeader">Hidden</sys:String>
+    <sys:String x:Key="LOCDuplicateFinder_NoLibraryPlugin">Playnite (local)</sys:String>
+</ResourceDictionary>
